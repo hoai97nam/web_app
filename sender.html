@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaf Dictionary</title>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="sender.script.js"></script> <!source control>
+</head>
+<style>
+	#title {
+		margin: auto;
+		width: 100%;
+		border-radius: 25px;
+		border: 3px solid #73AD21;
+		padding: 15px;
+		text-align: center;
+		font-size: 65px;	
+		background-color: #ebcfcf;
+	}
+	#btn {
+		border-radius: 8px;
+		font-size: 16px;
+		background-color: rgba(202, 202, 202, 0.884);
+		font-size: 20px;
+		padding: 30px;
+	}
+	#review {
+		margin: auto;
+		width: 600px;
+		height:350px;
+		border: 3px solid #73AD21;
+		padding: 10px;
+	}
+	* {
+    	box-sizing: border-box;
+	}
+	.column {
+		float: left;
+		padding: 5px;
+		height: 350px;
+		column-gap:9px;
+	}
+	.left {
+		width: 610px;
+		//column-gap:9px;
+	}
+
+	.right {
+		width: 300px;
+		//column-gap:9px;
+	}
+	.row:after {
+		width: 600px;
+		content: "";
+		display: table;
+		clear: both;
+		column-gap:9px;
+	}
+</style>
+<body>
+	<h1 id ="title">Plant Dictionary</h1>
+	<hr>
+	<br>
+	<div class="row">
+		<div class="column left" style="background-color:rgb(255, 255, 255);">
+			<img id="review" width="600" height="400">
+		</div>
+		<div class="column right" style="background-color:rgb(255, 255, 255);">
+			<input id="fileSelector" type="file">
+			<br>
+			<br>
+			<a id ="myAnchor" >
+				<button id="btn" type = "button"><b>GO</b></button>
+			</a>
+			<script>
+				function refreshPage(){
+					window.location.reload();
+					//window.location.reload();
+				} 
+			</script>
+			<button type="button" onclick = refreshPage()>submit</button>
+		</div>
+	</div>
+	
+</body>
+</html>
