@@ -1,1 +1,1 @@
-# socketio in applycation
+# socketio in application
